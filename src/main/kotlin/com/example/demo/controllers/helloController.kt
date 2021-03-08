@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.GetMapping
 class helloController {
 
     @GetMapping("/")
-    fun index(): String  {
+    fun index(): String {
         println("in the controller");
-        return "index"
+        return "index";
     }
 }

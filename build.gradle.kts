@@ -1,11 +1,10 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	id("org.springframework.boot") version "2.4.2"
+	id("org.springframework.boot") version "2.4.3"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
-	war
-	kotlin("jvm") version "1.4.21"
-	kotlin("plugin.spring") version "1.4.21"
+	kotlin("jvm") version "1.4.30"
+	kotlin("plugin.spring") version "1.4.30"
 }
 
 group = "com.example"
@@ -21,9 +20,9 @@ dependencies {
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+	implementation("org.springframework.boot:spring-boot-starter-thymeleaf")
 	implementation("org.mybatis.spring.boot:mybatis-spring-boot-starter:2.1.4")
 	runtimeOnly("org.postgresql:postgresql")
-	providedRuntime("org.springframework.boot:spring-boot-starter-tomcat")
 	testImplementation("org.springframework.boot:spring-boot-starter-test") { 
 		exclude(module = "junit") 
 		exclude(module = "hamcrest-core") 
